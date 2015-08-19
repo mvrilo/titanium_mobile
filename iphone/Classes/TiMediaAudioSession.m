@@ -245,12 +245,12 @@ NSString * const kTiMediaAudioSessionInputChange = @"TiMediaAudioSessionInputCha
         || [mode isEqualToString:AVAudioSessionCategoryPlayback] || [mode isEqualToString:AVAudioSessionCategoryAmbient]
         || [mode isEqualToString:AVAudioSessionCategorySoloAmbient]) {
         
-        [self startAudioSession];
+        /* [self startAudioSession]; */
         NSError* error = nil;
         [[AVAudioSession sharedInstance] setCategory:mode
                                          withOptions:AVAudioSessionCategoryOptionMixWithOthers
                                                error:&error];
-        [self stopAudioSession];
+        /* [self stopAudioSession]; */
         if (error != nil) {
             DebugLog(@"Error while setting category");
         }
