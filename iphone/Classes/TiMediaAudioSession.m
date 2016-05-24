@@ -248,7 +248,7 @@ NSString * const kTiMediaAudioSessionInputChange = @"TiMediaAudioSessionInputCha
         /* [self startAudioSession]; */
         NSError* error = nil;
         [[AVAudioSession sharedInstance] setCategory:mode
-                                         withOptions:AVAudioSessionCategoryOptionMixWithOthers
+                                         withOptions:AVAudioSessionCategoryOptionDuckOthers
                                                error:&error];
         /* [self stopAudioSession]; */
         if (error != nil) {
